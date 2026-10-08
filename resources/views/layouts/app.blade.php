@@ -5,23 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <title>Blade Templating</title>
+    <title>Blade Templating Sample</title>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-        <div class="container">
-            <a class="nav-link" href="{{ route('dashboard') }}"> Dashboard </a>        
-            <a class="nav-link" href="{{ route('patients.index')}}">Patients</a>
-            <a class="nav-link" href="{{ route('doctors.index')}}">Doctors</a>
-            <a class="nav-link" href="{{ route('appointments.index')}}">Appointments</a>
-        </div>
-    </nav>
-
-    <div class="container">
+    <div>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <a href="{{ route('dashboard') }}">Dashboard</a>
+            <a class="nav-link" href="{{ route('doctors.index') }}">Doctors</a>
+            <a class="nav-link" href="{{ route('patients.index') }}">Patients</a>
+            <a class="nav-link" href="{{ route('appointments.index') }}">Appointments</a>
+        </nav>
+    </div>
+    
+    <div>
         @yield('content')
     </div>
 
-    <footer class="bg-dark text-light pt-5 pb-4">
+      <footer class="bg-dark text-light pt-5 pb-4">
     <div class="container text-center text-md-start">
       <div class="row">
         
